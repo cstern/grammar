@@ -6,6 +6,8 @@ package edu.macalester.cs124.grammar;
  */
 public class Sequence implements Substitution {
     
+	private Substitution sub;
+	
     /**
      * Adds a new child substitution to the end of this sequence.
      */
@@ -18,6 +20,6 @@ public class Sequence implements Substitution {
      */
     @Override
     public void generate(GeneratorContext context) {
-        throw new UnsupportedOperationException("Sequence.generate() not implemented yet"); // TODO
+        context.getResult().append(sub); // TODO
     }
 }

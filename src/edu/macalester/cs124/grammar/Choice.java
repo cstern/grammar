@@ -1,17 +1,22 @@
 package edu.macalester.cs124.grammar;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import acm.util.RandomGenerator;
+
 
 /**
  * A multiple choice substitution. When generating content, objects of this class select one of
  * their choices.
  */
 public class Choice implements Substitution {
-    
+    private Set<Substitution> set = new HashSet<Substitution>();
     /**
      * Adds the given substitutions to the existing list of choices.
      */
     public void addChoice(Substitution substitution) {
-        throw new UnsupportedOperationException("Choice.addChoice() not implemented yet"); // TODO
+        set.add(substitution); // TODO
     }
     
     /**
@@ -20,6 +25,7 @@ public class Choice implements Substitution {
      */
     @Override
     public void generate(GeneratorContext context) {
-        throw new UnsupportedOperationException("Choice.generate() not implemented yet"); // TODO
+        RandomGenerator rand = new RandomGenerator();
+        rand = rand.nextInt()// TODO
     }
 }
